@@ -11,17 +11,24 @@ config_version=5
 [application]
 
 config/name="Lead"
+run/main_scene="res://lead/ecenas/stage.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=576
+window/size/viewport_height=324
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_height"
 
 [filesystem]
 
 import/blender/enabled=false
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmn50mefyybr6"]
+
+[ext_resource type="PackedScene" uid="uid://djy17kthot4e5" path="res://lead/ecenas/yosef.tscn" id="1_pl6ek"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-1, 48, -12, 177, 577, 176, 580, 49)
+
+[node name="yosef" parent="." instance=ExtResource("1_pl6ek")]
+position = Vector2(119, -67)
+
+[node name="Camera2D" type="Camera2D" parent="yosef"]
+position = Vector2(-119, 69)
+position_smoothing_enabled = true
