@@ -1,17 +1,63 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmn50mefyybr6"]
+[gd_scene load_steps=7 format=3 uid="uid://dmn50mefyybr6"]
 
+[ext_resource type="Texture2D" uid="uid://cc7r0xfc34jff" path="res://lead/sprites/suelo/stage.png" id="1_2d7ut"]
 [ext_resource type="PackedScene" uid="uid://djy17kthot4e5" path="res://lead/ecenas/yosef.tscn" id="1_pl6ek"]
+[ext_resource type="Texture2D" uid="uid://bkokqu03vbjto" path="res://lead/sprites/fondo/1/fondo.png" id="3_ys08n"]
+[ext_resource type="Texture2D" uid="uid://cb1ccepawnxpr" path="res://lead/sprites/fondo/1/bosque_back.png" id="4_ht20t"]
+[ext_resource type="Texture2D" uid="uid://b75oh3tf0qw85" path="res://lead/sprites/fondo/1/bosque_front.png" id="5_s5llt"]
+[ext_resource type="Texture2D" uid="uid://4korgkxyf1ht" path="res://lead/sprites/fondo/1/albusto.png" id="6_vmj1j"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_2d7ut")
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-1, 48, -12, 177, 577, 176, 580, 49)
+polygon = PackedVector2Array(-2332, 284, -2340, 868, 978, 860, 954, 380, 1466, 388, 1444, -92, 1932, -132, 1940, -260, 820, -252, 820, -44, 1288.96, -44.3435, 1314, 196, 130, 196, 138, 452, 850, 436, 834, 708, -2204, 700, -2208, 444, -290, 436, -290, 262)
 
 [node name="yosef" parent="." instance=ExtResource("1_pl6ek")]
-position = Vector2(119, -67)
+position = Vector2(-25, 159)
 
-[node name="Camera2D" type="Camera2D" parent="yosef"]
-position = Vector2(-119, 69)
-position_smoothing_enabled = true
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(921.6, 0)
+
+[node name="Fondo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(-25, 445.2)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("3_ys08n")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(921.6, 0)
+
+[node name="BosqueBack" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(-25, 445.2)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("4_ht20t")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(921.6, 0)
+
+[node name="BosqueFront" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(-25, 445.2)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("5_s5llt")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(921.6, 0)
+
+[node name="Albusto" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(-25, 445.2)
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("6_vmj1j")
+centered = false

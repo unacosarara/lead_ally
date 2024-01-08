@@ -477,7 +477,6 @@ animations = [{
 }]
 
 [sub_resource type="Animation" id="Animation_32d8t"]
-loop_mode = 1
 step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -517,7 +516,6 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_pqp3k"]
-loop_mode = 1
 step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -557,7 +555,6 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_q1nk3"]
-loop_mode = 1
 step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -832,7 +829,6 @@ blend_point_2/node = SubResource("AnimationNodeAnimation_u3mws")
 blend_point_2/pos = 0.5
 blend_point_3/node = SubResource("AnimationNodeAnimation_r6k22")
 blend_point_3/pos = 1.0
-blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sc12n"]
 animation = &"run_0"
@@ -857,15 +853,11 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_jy801")
 blend_point_3/pos = 1.0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jd56f"]
-advance_mode = 2
-advance_condition = &"is_idle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m8axj"]
-advance_mode = 2
 advance_condition = &"is_run"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bdk2o"]
-advance_mode = 2
 advance_condition = &"is_idle"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_lhcdq"]
@@ -873,7 +865,7 @@ states/Start/position = Vector2(554.667, 204)
 states/idle/node = SubResource("AnimationNodeBlendSpace1D_pjd3r")
 states/idle/position = Vector2(553.778, 127.333)
 states/run/node = SubResource("AnimationNodeBlendSpace1D_130mv")
-states/run/position = Vector2(297.667, 127.481)
+states/run/position = Vector2(297.667, 126.889)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_jd56f"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_m8axj"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_bdk2o")]
 graph_offset = Vector2(-138.479, 0)
 
@@ -881,16 +873,14 @@ graph_offset = Vector2(-138.479, 0)
 radius = 9.0
 height = 40.0
 
-[node name="yosef" type="CharacterBody2D" node_paths=PackedStringArray("animtrtee", "camara")]
-scale = Vector2(1.2, 1.2)
+[node name="yosef" type="CharacterBody2D"]
 script = ExtResource("1_mucji")
-animtrtee = NodePath("AnimationTree")
-camara = NodePath("Camera2D")
+cant_jump = null
+dircion = null
 
 [node name="sprite_sheet_yosef" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dwx0d")
 animation = &"idle"
-frame = 18
 
 [node name="yosef_anim" type="AnimationPlayer" parent="."]
 libraries = {
@@ -905,8 +895,8 @@ tree_root = SubResource("AnimationNodeStateMachine_lhcdq")
 anim_player = NodePath("../yosef_anim")
 parameters/conditions/is_idle = false
 parameters/conditions/is_run = false
-parameters/idle/blend_position = 0.419786
-parameters/run/blend_position = -1.0
+parameters/idle/blend_position = 0.299349
+parameters/run/blend_position = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 4)
@@ -942,14 +932,3 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("8_xlvp4")
 texture_pressed = ExtResource("9_xo2eg")
 action = "ui_accept"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, 4.135)
-zoom = Vector2(0.86, 0.86)
-position_smoothing_enabled = true
-position_smoothing_speed = 3.44
-drag_vertical_enabled = true
-drag_vertical_offset = -0.98
-drag_bottom_margin = 0.59
-editor_draw_limits = true
-editor_draw_drag_margin = true
