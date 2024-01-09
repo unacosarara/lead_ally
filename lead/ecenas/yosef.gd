@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@export var direcion: float
 const jump_limit = 1
 @export var cant_jump = 0
 const SPEED = 200
@@ -19,11 +19,16 @@ func _physics_process(delta):
 	if is_on_floor():
 		cant_jump = 0
 	var direction = Input.get_axis("ui_left", "ui_right")
+	direcion = direction
 	if Input.is_action_pressed("ui_left"):
+
+		$sprite_sheet_yosef.position.x = -10.28
 		$sprite_sheet_yosef.flip_h = true
 	elif Input.is_action_pressed("ui_right"):
+		$sprite_sheet_yosef.position.x = 0
 		$sprite_sheet_yosef.flip_h = false
 	if direction:
+		camara.offset.x = direction * 74
 		velocity.x = direction * SPEED
 		animtrtee.set("parameters/conditions/is_run", true)
 		animtrtee.set("parameters/conditions/is_idle", false) 
@@ -35,7 +40,4 @@ func _physics_process(delta):
 													   #<>
 func _process(_delta):
 	pass
-	
-func cambio_de_anim():
-	
-	pass
+

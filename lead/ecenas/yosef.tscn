@@ -888,9 +888,12 @@ animtrtee = NodePath("AnimationTree")
 camara = NodePath("Camera2D")
 
 [node name="sprite_sheet_yosef" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10.28, -0.02)
 sprite_frames = SubResource("SpriteFrames_dwx0d")
 animation = &"idle"
 frame = 18
+offset = Vector2(0, -1.19)
+flip_h = true
 
 [node name="yosef_anim" type="AnimationPlayer" parent="."]
 libraries = {
@@ -944,12 +947,15 @@ texture_pressed = ExtResource("9_xo2eg")
 action = "ui_accept"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, 4.135)
+offset = Vector2(74.72, 4.135)
 zoom = Vector2(0.86, 0.86)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.44
 drag_vertical_enabled = true
+drag_horizontal_offset = 1.0
 drag_vertical_offset = -0.98
+drag_left_margin = 0.06
+drag_right_margin = 0.0
 drag_bottom_margin = 0.59
 editor_draw_limits = true
 editor_draw_drag_margin = true
