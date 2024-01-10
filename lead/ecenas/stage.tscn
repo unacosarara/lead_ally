@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmn50mefyybr6"]
+[gd_scene load_steps=11 format=3 uid="uid://dmn50mefyybr6"]
 
 [ext_resource type="Texture2D" uid="uid://cc7r0xfc34jff" path="res://lead/sprites/suelo/stage.png" id="1_2d7ut"]
 [ext_resource type="PackedScene" uid="uid://djy17kthot4e5" path="res://lead/ecenas/yosef.tscn" id="1_pl6ek"]
@@ -6,6 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://cb1ccepawnxpr" path="res://lead/sprites/fondo/1/bosque_back.png" id="4_ht20t"]
 [ext_resource type="Texture2D" uid="uid://b75oh3tf0qw85" path="res://lead/sprites/fondo/1/bosque_front.png" id="5_s5llt"]
 [ext_resource type="Texture2D" uid="uid://4korgkxyf1ht" path="res://lead/sprites/fondo/1/albusto.png" id="6_vmj1j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tns0p"]
+size = Vector2(254.545, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsqui"]
+size = Vector2(131.768, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ak76u"]
+size = Vector2(162.525, 50.9639)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yj4j2"]
+size = Vector2(157.475, 20)
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,7 +27,31 @@
 texture = ExtResource("1_2d7ut")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-2332, 284, -2340, 868, 978, 860, 954, 380, 1466, 388, 1444, -92, 1932, -132, 1940, -260, 820, -252, 820, -44, 1288.96, -44.3435, 1314, 196, 130, 196, 138, 452, 850, 436, 834, 708, -2204, 700, -2208, 444, -290, 436, -290, 262)
+polygon = PackedVector2Array(-2332, 284, -2340, 868, 978, 860, 979, 441, 1487, 372, 1484, -58, 1933, -141, 1935, -553, 1335, -608, 625, -589, 625, -62, -325, -60, -338, 45, -272, 54, -268, -33, 659, -33, 658, -481, 1335, -481, 1335, -469, 1845, -470, 1846, -268, 1338, -268, 1336, -255, 824, -255, 826, -34, 1303, -33, 1314, 196, 130, 196, 138, 452, 826, 446, 825, 705, -2208, 705, -2208, 446, -268, 446, -271, 270, -430.808, 263.517)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-490, 683)
+scale = Vector2(0.99, 0.83)
+shape = SubResource("RectangleShape2D_tns0p")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-263.225, 618)
+scale = Vector2(0.99, 0.83)
+shape = SubResource("RectangleShape2D_vsqui")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-119.45, 566.85)
+scale = Vector2(0.99, 0.83)
+shape = SubResource("RectangleShape2D_ak76u")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(38.05, 490)
+scale = Vector2(0.99, 0.83)
+shape = SubResource("RectangleShape2D_yj4j2")
+one_way_collision = true
 
 [node name="yosef" parent="." instance=ExtResource("1_pl6ek")]
 position = Vector2(-25, 159)

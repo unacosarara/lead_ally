@@ -1,13 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704754341
+::res://::1704841331
 ::res://lead/::1704385243
-::res://lead/ecenas/::1704689897
-stage.tscn::PackedScene::8030231876888698821::1704689897::0::1::::<><>::uid://cc7r0xfc34jff::::res://lead/sprites/suelo/stage.png<>uid://djy17kthot4e5::::res://lead/ecenas/yosef.tscn<>uid://bkokqu03vbjto::::res://lead/sprites/fondo/1/fondo.png<>uid://cb1ccepawnxpr::::res://lead/sprites/fondo/1/bosque_back.png<>uid://b75oh3tf0qw85::::res://lead/sprites/fondo/1/bosque_front.png<>uid://4korgkxyf1ht::::res://lead/sprites/fondo/1/albusto.png
-yosef.gd::GDScript::-1::1704689878::0::1::::<>CharacterBody2D<>::
-yosef.tscn::PackedScene::7842143052058236466::1704689895::0::1::::<><>::uid://gsxkxytlvj2g::::res://lead/sprites/yosef/spr_sheet_Yosef.png<>res://lead/ecenas/yosef.gd<>uid://b5crkp30w5i0h::::res://lead/sprites/yosef/Spr_Run_Yosef.png<>uid://qcg13hjwvn5w::::res://lead/sprites/ui/left.png<>uid://ckbe0lbkw3jqi::::res://lead/sprites/ui/left_press.png<>uid://duiossqe38q5v::::res://lead/sprites/ui/right.png<>uid://dqgefsjub4kx5::::res://lead/sprites/ui/right_press.png<>uid://78gbdrg1ri4c::::res://lead/sprites/ui/jump.png<>uid://0jt1liyj7t1b::::res://lead/sprites/ui/jump_press.png
+::res://lead/ecenas/::1704756337
+stage.tscn::PackedScene::8030231876888698821::1704756306::0::1::::<><>::uid://cc7r0xfc34jff::::res://lead/sprites/suelo/stage.png<>uid://djy17kthot4e5::::res://lead/ecenas/yosef.tscn<>uid://bkokqu03vbjto::::res://lead/sprites/fondo/1/fondo.png<>uid://cb1ccepawnxpr::::res://lead/sprites/fondo/1/bosque_back.png<>uid://b75oh3tf0qw85::::res://lead/sprites/fondo/1/bosque_front.png<>uid://4korgkxyf1ht::::res://lead/sprites/fondo/1/albusto.png
+yosef.gd::GDScript::-1::1704756337::0::1::::<>CharacterBody2D<>::
+yosef.tscn::PackedScene::7842143052058236466::1704756336::0::1::::<><>::uid://gsxkxytlvj2g::::res://lead/sprites/yosef/spr_sheet_Yosef.png<>res://lead/ecenas/yosef.gd<>uid://b5crkp30w5i0h::::res://lead/sprites/yosef/Spr_Run_Yosef.png<>uid://qcg13hjwvn5w::::res://lead/sprites/ui/left.png<>uid://ckbe0lbkw3jqi::::res://lead/sprites/ui/left_press.png<>uid://duiossqe38q5v::::res://lead/sprites/ui/right.png<>uid://dqgefsjub4kx5::::res://lead/sprites/ui/right_press.png<>uid://78gbdrg1ri4c::::res://lead/sprites/ui/jump.png<>uid://0jt1liyj7t1b::::res://lead/sprites/ui/jump_press.png
 ::res://lead/script/::1704385243
 Nuevo documento de texto.txt::TextFile::-1::1704385243::0::1::::<><>::
-::res://lead/sprites/::1704386207
+::res://lead/sprites/::1704821218
+lead.png::CompressedTexture2D::1258685342105849209::1704821180::1704821218::1::::<><>::
 ::res://lead/sprites/fondo/::1704385065
 ::res://lead/sprites/fondo/1/::1704510245
 albusto.png::CompressedTexture2D::2057000971104109297::1704510017::1704510245::1::::<><>::
@@ -16,7 +17,7 @@ bosque_front.png::CompressedTexture2D::4695259051454324296::1704509862::17045102
 fondo.png::CompressedTexture2D::3117847241647823312::1704509945::1704510245::1::::<><>::
 ::res://lead/sprites/npc/::1704387823
 viejo_sheet.png::CompressedTexture2D::8211317007437336461::1704386207::1704387823::1::::<><>::
-::res://lead/sprites/suelo/::1704421931
+::res://lead/sprites/suelo/::1704821180
 stage.png::CompressedTexture2D::4980357192407346043::1704421914::1704421931::1::::<><>::
 ::res://lead/sprites/tienda/::1704266180
 tienda.png::CompressedTexture2D::5816235154155212800::1704264870::1704266180::1::::<><>::

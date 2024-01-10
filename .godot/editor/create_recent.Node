@@ -1,14 +1,14 @@
+CollisionShape2D
+Node2D
 ParallaxBackground
 ParallaxLayer
 Sprite2D
 Camera2D
 CollisionPolygon2D
 StaticBody2D
-CollisionShape2D
 TouchScreenButton
 CanvasLayer
 Control
 CharacterBody2D
 AnimationTree
 AnimationPlayer
-AnimatedSprite2D
