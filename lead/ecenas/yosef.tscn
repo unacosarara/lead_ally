@@ -1,7 +1,7 @@
 [gd_scene load_steps=99 format=3 uid="uid://djy17kthot4e5"]
 
 [ext_resource type="Texture2D" uid="uid://gsxkxytlvj2g" path="res://lead/sprites/yosef/spr_sheet_Yosef.png" id="1_2xrn2"]
-[ext_resource type="Script" path="res://lead/ecenas/yosef.gd" id="1_mucji"]
+[ext_resource type="Script" path="res://lead/script/yosef.gd" id="1_mucji"]
 [ext_resource type="Texture2D" uid="uid://b5crkp30w5i0h" path="res://lead/sprites/yosef/Spr_Run_Yosef.png" id="2_7ji18"]
 [ext_resource type="Texture2D" uid="uid://qcg13hjwvn5w" path="res://lead/sprites/ui/left.png" id="4_ks6e4"]
 [ext_resource type="Texture2D" uid="uid://ckbe0lbkw3jqi" path="res://lead/sprites/ui/left_press.png" id="5_2n1ee"]
