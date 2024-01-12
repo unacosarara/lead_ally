@@ -947,7 +947,7 @@ texture_pressed = ExtResource("9_xo2eg")
 action = "ui_accept"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(74.72, 4.135)
+offset = Vector2(0, 4)
 zoom = Vector2(0.86, 0.86)
 position_smoothing_enabled = true
 position_smoothing_speed = 3.44
