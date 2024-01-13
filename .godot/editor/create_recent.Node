@@ -1,8 +1,10 @@
-CollisionShape2D
 Node2D
+VisibleOnScreenNotifier2D
+VisibleOnScreenEnabler2D
+Sprite2D
+CollisionShape2D
 ParallaxBackground
 ParallaxLayer
-Sprite2D
 Camera2D
 CollisionPolygon2D
 StaticBody2D
@@ -10,5 +12,3 @@ TouchScreenButton
 CanvasLayer
 Control
 CharacterBody2D
-AnimationTree
-AnimationPlayer
