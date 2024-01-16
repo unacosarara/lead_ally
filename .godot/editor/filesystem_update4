@@ -1,3 +1,4 @@
-res://lead/ecenas/yosef.tscn
-res://lead/ecenas/yosef.gd
 res://lead/ecenas/stage.tscn
+res://lead/ecenas/yosef.tscn
+res://lead/script/yosef.gd
+res://lead/ecenas/stage.gd

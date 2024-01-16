@@ -1,13 +1,42 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmn50mefyybr6"]
+[gd_scene load_steps=20 format=3 uid="uid://dmn50mefyybr6"]
 
 [ext_resource type="Texture2D" uid="uid://cc7r0xfc34jff" path="res://lead/sprites/suelo/stage.png" id="1_2d7ut"]
 [ext_resource type="PackedScene" uid="uid://djy17kthot4e5" path="res://lead/ecenas/yosef.tscn" id="1_pl6ek"]
+[ext_resource type="Script" path="res://lead/ecenas/stage.gd" id="1_udk7c"]
 [ext_resource type="Texture2D" uid="uid://bkokqu03vbjto" path="res://lead/sprites/fondo/1/fondo.png" id="3_ys08n"]
 [ext_resource type="Texture2D" uid="uid://cb1ccepawnxpr" path="res://lead/sprites/fondo/1/bosque_back.png" id="4_ht20t"]
 [ext_resource type="Texture2D" uid="uid://b75oh3tf0qw85" path="res://lead/sprites/fondo/1/bosque_front.png" id="5_s5llt"]
 [ext_resource type="Texture2D" uid="uid://4korgkxyf1ht" path="res://lead/sprites/fondo/1/albusto.png" id="6_vmj1j"]
+[ext_resource type="Texture2D" uid="uid://clg3sv0kp0838" path="res://lead/sprites/fondo/2/fondo_2.png" id="7_vp7di"]
+[ext_resource type="Texture2D" uid="uid://blal5snc6oa2u" path="res://lead/sprites/fondo/2/arbol_2.png" id="8_ls4eq"]
+[ext_resource type="Texture2D" uid="uid://bmhp7xlw5h8gv" path="res://lead/sprites/fondo/2/albusto_back_2.png" id="9_68q7p"]
+[ext_resource type="Texture2D" uid="uid://c2vr3fntf5fs6" path="res://lead/sprites/fondo/2/albusto_front_2.png" id="10_5tsvp"]
+[ext_resource type="Texture2D" uid="uid://8eauj1ofl66w" path="res://lead/sprites/fondo/3/fondo_3.png" id="11_jtjxr"]
+[ext_resource type="Texture2D" uid="uid://c0r54csqaku2g" path="res://lead/sprites/fondo/3/nube_3.png" id="12_7fbao"]
+[ext_resource type="Texture2D" uid="uid://dv1vrmjdntj4r" path="res://lead/sprites/fondo/3/albusto_back_3.png" id="13_quq3t"]
+[ext_resource type="Texture2D" uid="uid://cf6e4kwb3a8hj" path="res://lead/sprites/fondo/3/albusto_front_3.png" id="14_sykxd"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tns0p"]
+size = Vector2(254.545, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsqui"]
+size = Vector2(131.768, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ak76u"]
+size = Vector2(162.525, 50.9639)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yj4j2"]
+size = Vector2(157.475, 20)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("fondo_1", "fondo_2", "fondo_3")]
+script = ExtResource("1_udk7c")
+fondo_1 = NodePath("fondo_1")
+fondo_2 = NodePath("fondo_2")
+fondo_3 = NodePath("fondo_3")
+
+[node name="yosef" parent="." instance=ExtResource("1_pl6ek")]
+z_index = 6
+position = Vector2(907, -368)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -15,49 +44,177 @@
 texture = ExtResource("1_2d7ut")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-2332, 284, -2340, 868, 978, 860, 954, 380, 1466, 388, 1444, -92, 1932, -132, 1940, -260, 820, -252, 820, -44, 1288.96, -44.3435, 1314, 196, 130, 196, 138, 452, 850, 436, 834, 708, -2204, 700, -2208, 444, -290, 436, -290, 262)
+z_index = -1
+position = Vector2(-13, 0)
+polygon = PackedVector2Array(-2332, 284, -2340, 868, 978, 860, 979, 441, 1487, 372, 1484, -58, 1933, -141, 1935, -553, 1335, -608, 625, -589, 625, -62, -325, -60, -338, 45, -258, 54, -259, -33, 672, -33, 671, -481, 1348, -481, 1348, -469, 1855, -470, 1856, -268, 1350, -267, 1348, -255, 838, -255, 838, -35, 1319, -33, 1319, 193, 134, 193, 134, 445, 826, 446, 825, 705, -2208, 705, -2208, 446, -268, 446, -271, 270, -430.808, 263.517)
 
-[node name="yosef" parent="." instance=ExtResource("1_pl6ek")]
-position = Vector2(-25, 159)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-490, 683)
+scale = Vector2(0.99, 0.83)
+shape = SubResource("RectangleShape2D_tns0p")
+one_way_collision = true
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-263.225, 618)
+scale = Vector2(0.99, 0.83)
+shape = SubResource("RectangleShape2D_vsqui")
+one_way_collision = true
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-119.45, 566.85)
+scale = Vector2(0.99, 0.83)
+shape = SubResource("RectangleShape2D_ak76u")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(38.05, 490)
+scale = Vector2(0.99, 0.83)
+shape = SubResource("RectangleShape2D_yj4j2")
+one_way_collision = true
+
+[node name="stop_camara" type="Node2D" parent="StaticBody2D"]
+
+[node name="fondo_1" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="fondo_1"]
 motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(921.6, 0)
 
-[node name="Fondo" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="Fondo" type="Sprite2D" parent="fondo_1/ParallaxLayer"]
 position = Vector2(-25, 445.2)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("3_ys08n")
 centered = false
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="fondo_1"]
 motion_scale = Vector2(0.6, 1)
 motion_mirroring = Vector2(921.6, 0)
 
-[node name="BosqueBack" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+[node name="BosqueBack" type="Sprite2D" parent="fondo_1/ParallaxLayer2"]
 position = Vector2(-25, 445.2)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("4_ht20t")
 centered = false
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="fondo_1"]
 motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(921.6, 0)
 
-[node name="BosqueFront" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+[node name="BosqueFront" type="Sprite2D" parent="fondo_1/ParallaxLayer3"]
 position = Vector2(-25, 445.2)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("5_s5llt")
 centered = false
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="fondo_1"]
 motion_scale = Vector2(0.9, 1)
 motion_mirroring = Vector2(921.6, 0)
 
-[node name="Albusto" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+[node name="Albusto" type="Sprite2D" parent="fondo_1/ParallaxLayer4"]
 position = Vector2(-25, 445.2)
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("6_vmj1j")
 centered = false
+
+[node name="fondo_2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="fondo_2"]
+position = Vector2(0, 80)
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(803.84, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="fondo_2/ParallaxLayer"]
+position = Vector2(319.92, 0)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("7_vp7di")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="fondo_2"]
+position = Vector2(0, 80)
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(803.84, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="fondo_2/ParallaxLayer2"]
+position = Vector2(319.92, 0)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("8_ls4eq")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="fondo_2"]
+position = Vector2(0, 80)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(803.84, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondo_2/ParallaxLayer3"]
+position = Vector2(319.92, 0)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("9_68q7p")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="fondo_2"]
+position = Vector2(0, 80)
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(803.84, 0)
+
+[node name="Sprite2D4" type="Sprite2D" parent="fondo_2/ParallaxLayer4"]
+position = Vector2(319.92, 0)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("10_5tsvp")
+
+[node name="fondo_3" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="fondo_3"]
+position = Vector2(696, -368)
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(803.84, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="fondo_3/ParallaxLayer"]
+position = Vector2(319.92, 0)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("11_jtjxr")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="fondo_3"]
+position = Vector2(696, -368)
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(803.84, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="fondo_3/ParallaxLayer2"]
+position = Vector2(319.92, 0)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("12_7fbao")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="fondo_3"]
+position = Vector2(696, -368)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(803.84, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondo_3/ParallaxLayer3"]
+position = Vector2(319.92, 0)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("13_quq3t")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="fondo_3"]
+position = Vector2(696, -368)
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(803.84, 0)
+
+[node name="Sprite2D4" type="Sprite2D" parent="fondo_3/ParallaxLayer4"]
+position = Vector2(319.92, 0)
+scale = Vector2(1.57, 1.57)
+texture = ExtResource("14_sykxd")
+
+[node name="parte_1" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-700.75, 527.75)
+scale = Vector2(152.225, 19.775)
+
+[node name="parte_2" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(534, 82)
+scale = Vector2(81.5, 24.3)
+
+[node name="parte_3" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1256.25, -303)
+scale = Vector2(61.075, 17.8)
+
+[connection signal="screen_entered" from="parte_1" to="." method="_on_parte_1_screen_entered"]
+[connection signal="screen_exited" from="parte_1" to="." method="_on_parte_1_screen_exited"]
+[connection signal="screen_entered" from="parte_2" to="." method="_on_parte_2_screen_entered"]
+[connection signal="screen_exited" from="parte_2" to="." method="_on_parte_2_screen_exited"]
+[connection signal="screen_entered" from="parte_3" to="." method="_on_parte_3_screen_entered"]
+[connection signal="screen_exited" from="parte_3" to="." method="_on_parte_3_screen_exited"]

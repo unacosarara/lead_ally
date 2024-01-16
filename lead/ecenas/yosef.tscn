@@ -1,7 +1,7 @@
 [gd_scene load_steps=99 format=3 uid="uid://djy17kthot4e5"]
 
 [ext_resource type="Texture2D" uid="uid://gsxkxytlvj2g" path="res://lead/sprites/yosef/spr_sheet_Yosef.png" id="1_2xrn2"]
-[ext_resource type="Script" path="res://lead/ecenas/yosef.gd" id="1_mucji"]
+[ext_resource type="Script" path="res://lead/script/yosef.gd" id="1_mucji"]
 [ext_resource type="Texture2D" uid="uid://b5crkp30w5i0h" path="res://lead/sprites/yosef/Spr_Run_Yosef.png" id="2_7ji18"]
 [ext_resource type="Texture2D" uid="uid://qcg13hjwvn5w" path="res://lead/sprites/ui/left.png" id="4_ks6e4"]
 [ext_resource type="Texture2D" uid="uid://ckbe0lbkw3jqi" path="res://lead/sprites/ui/left_press.png" id="5_2n1ee"]
@@ -947,10 +947,9 @@ texture_pressed = ExtResource("9_xo2eg")
 action = "ui_accept"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(74.72, 4.135)
+offset = Vector2(0, 4)
 zoom = Vector2(0.86, 0.86)
 position_smoothing_enabled = true
-position_smoothing_speed = 3.44
 drag_vertical_enabled = true
 drag_horizontal_offset = 1.0
 drag_vertical_offset = -0.98

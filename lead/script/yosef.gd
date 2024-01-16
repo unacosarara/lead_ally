@@ -9,6 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var camara: Camera2D
 
 
+
 func _physics_process(delta): 
 
 	if not is_on_floor():
@@ -28,7 +29,10 @@ func _physics_process(delta):
 		$sprite_sheet_yosef.position.x = 0
 		$sprite_sheet_yosef.flip_h = false
 	if direction:
-		camara.offset.x = direction * 74
+		if direction > 0 :
+			camara.position.x = 30
+		elif direction < 0 :
+			camara.position.x = -100
 		velocity.x = direction * SPEED
 		animtrtee.set("parameters/conditions/is_run", true)
 		animtrtee.set("parameters/conditions/is_idle", false) 
@@ -40,4 +44,5 @@ func _physics_process(delta):
 													   #<>
 func _process(_delta):
 	pass
+
 
