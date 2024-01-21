@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cc7r0xfc34jff" path="res://lead/sprites/suelo/stage.png" id="1_2d7ut"]
 [ext_resource type="PackedScene" uid="uid://djy17kthot4e5" path="res://lead/ecenas/yosef.tscn" id="1_pl6ek"]
-[ext_resource type="Script" path="res://lead/ecenas/stage.gd" id="1_udk7c"]
+[ext_resource type="Script" path="res://lead/script/stage.gd" id="1_udk7c"]
 [ext_resource type="Texture2D" uid="uid://bkokqu03vbjto" path="res://lead/sprites/fondo/1/fondo.png" id="3_ys08n"]
 [ext_resource type="Texture2D" uid="uid://cb1ccepawnxpr" path="res://lead/sprites/fondo/1/bosque_back.png" id="4_ht20t"]
 [ext_resource type="Texture2D" uid="uid://b75oh3tf0qw85" path="res://lead/sprites/fondo/1/bosque_front.png" id="5_s5llt"]

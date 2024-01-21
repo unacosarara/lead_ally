@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://djy17kthot4e5"]
+[gd_scene load_steps=103 format=3 uid="uid://djy17kthot4e5"]
 
 [ext_resource type="Texture2D" uid="uid://gsxkxytlvj2g" path="res://lead/sprites/yosef/spr_sheet_Yosef.png" id="1_2xrn2"]
 [ext_resource type="Script" path="res://lead/script/yosef.gd" id="1_mucji"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dqgefsjub4kx5" path="res://lead/sprites/ui/right_press.png" id="7_gjajm"]
 [ext_resource type="Texture2D" uid="uid://78gbdrg1ri4c" path="res://lead/sprites/ui/jump.png" id="8_xlvp4"]
 [ext_resource type="Texture2D" uid="uid://0jt1liyj7t1b" path="res://lead/sprites/ui/jump_press.png" id="9_xo2eg"]
+[ext_resource type="Texture2D" uid="uid://can37ria8vex0" path="res://lead/sprites/ui/yoseft/ores.png" id="10_tvcp3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_47ekr"]
 atlas = ExtResource("1_2xrn2")
@@ -881,6 +882,18 @@ graph_offset = Vector2(-138.479, 0)
 radius = 9.0
 height = 40.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfccd"]
+atlas = ExtResource("10_tvcp3")
+region = Rect2(3.67023, 47.9993, 71.0258, 27.3971)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfvm5"]
+atlas = ExtResource("10_tvcp3")
+region = Rect2(28, 76, 46, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_se256"]
+atlas = ExtResource("10_tvcp3")
+region = Rect2(4, 78, 23, 7)
+
 [node name="yosef" type="CharacterBody2D" node_paths=PackedStringArray("animtrtee", "camara")]
 scale = Vector2(1.2, 1.2)
 script = ExtResource("1_mucji")
@@ -945,6 +958,44 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("8_xlvp4")
 texture_pressed = ExtResource("9_xo2eg")
 action = "ui_accept"
+
+[node name="Control2" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 47.0
+offset_bottom = 47.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control2"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 11.4
+offset_right = 80.0
+offset_bottom = 38.4
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_bfccd")
+stretch_mode = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/Control2"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 29.0
+offset_right = 102.0
+offset_bottom = 38.0
+scale = Vector2(2, 2)
+value = 100.0
+texture_progress = SubResource("AtlasTexture_rfvm5")
+
+[node name="TextureProgressBar2" type="TextureProgressBar" parent="CanvasLayer/Control2"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 15.0
+offset_right = 79.0
+offset_bottom = 22.0
+scale = Vector2(2, 2)
+value = 100.0
+texture_progress = SubResource("AtlasTexture_se256")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 4)

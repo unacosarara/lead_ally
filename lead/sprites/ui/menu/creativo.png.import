@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ihtycsfegmq4"
-path="res://.godot/imported/btn .png-24d2e705de29221eedabf785a77465a4.ctex"
+uid="uid://bm0v6yuux5118"
+path="res://.godot/imported/creativo.png-70691ac477b124eebd1657e9adcb71c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://lead/sprites/ui/btn .png"
-dest_files=["res://.godot/imported/btn .png-24d2e705de29221eedabf785a77465a4.ctex"]
+source_file="res://lead/sprites/ui/menu/creativo.png"
+dest_files=["res://.godot/imported/creativo.png-70691ac477b124eebd1657e9adcb71c1.ctex"]
 
 [params]
 
