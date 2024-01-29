@@ -1,3 +1,9 @@
+RayCast2D
+AnimationPlayer
+Sprite2D
+CollisionShape2D
+CharacterBody2D
+Node2D
 TextureProgressBar
 ProgressBar
 HScrollBar
@@ -6,9 +12,4 @@ HSlider
 TextureRect
 Control
 TouchScreenButton
-Sprite2D
-AnimationPlayer
-Node2D
 VisibleOnScreenNotifier2D
-VisibleOnScreenEnabler2D
-CollisionShape2D

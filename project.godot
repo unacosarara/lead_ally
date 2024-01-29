@@ -29,6 +29,11 @@ import/blender/enabled=false
 
 pointing/emulate_touch_from_mouse=true
 
+[layer_names]
+
+2d_physics/layer_1="stage"
+2d_physics/layer_4="player"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

@@ -896,6 +896,7 @@ region = Rect2(4, 78, 23, 7)
 
 [node name="yosef" type="CharacterBody2D" node_paths=PackedStringArray("animtrtee", "camara")]
 scale = Vector2(1.2, 1.2)
+collision_layer = 8
 script = ExtResource("1_mucji")
 animtrtee = NodePath("AnimationTree")
 camara = NodePath("Camera2D")

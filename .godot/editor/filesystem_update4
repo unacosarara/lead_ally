@@ -1,3 +1,5 @@
 res://lead/ecenas/stage.tscn
 res://lead/ecenas/menu.tscn
 res://lead/ecenas/yosef.tscn
+res://lead/ecenas/bot_1.tscn
+res://lead/script/bot_1.gd

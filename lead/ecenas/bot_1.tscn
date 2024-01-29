@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxfya4528t3lm"]
+
+[ext_resource type="Texture2D" uid="uid://cj1o4f2xpqx68" path="res://lead/sprites/npc/enemigo/bot_1.png" id="1_5iasy"]
+[ext_resource type="Script" path="res://lead/script/bot_1.gd" id="1_m0rf3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oq8db"]
+radius = 15.0
+height = 48.0
+
+[sub_resource type="Animation" id="Animation_kx4xk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_y3oob"]
+resource_name = "new_animation"
+length = 0.40001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ki5c3"]
+_data = {
+"RESET": SubResource("Animation_kx4xk"),
+"run": SubResource("Animation_y3oob")
+}
+
+[node name="bot_1" type="CharacterBody2D" node_paths=PackedStringArray("anim", "cast_player_left", "cast_player_right", "cast_left", "cast_right", "sprite")]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_m0rf3")
+anim = NodePath("AnimationPlayer")
+cast_player_left = NodePath("cast_player_left")
+cast_player_right = NodePath("cast_player_right")
+cast_left = NodePath("cast_left")
+cast_right = NodePath("cast_right")
+sprite = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1)
+shape = SubResource("CapsuleShape2D_oq8db")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5iasy")
+hframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ki5c3")
+}
+
+[node name="cast_player_left" type="RayCast2D" parent="."]
+rotation = -4.71239
+target_position = Vector2(0, 250)
+collision_mask = 8
+
+[node name="cast_player_right" type="RayCast2D" parent="."]
+rotation = 4.71239
+target_position = Vector2(0, 250)
+collision_mask = 8
+
+[node name="cast_left" type="RayCast2D" parent="."]
+rotation = -4.71239
+
+[node name="cast_right" type="RayCast2D" parent="."]
+rotation = 4.71239
