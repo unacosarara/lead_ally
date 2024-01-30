@@ -10,6 +10,8 @@ var direccion: bool
 @export var cast_right: RayCast2D
 @export var sprite: Sprite2D
 var bullet: PackedScene = preload("res://lead/ecenas/bullet_1.tscn")
+var shot: bool
+var time: float = 10
 
 func _ready():
 	anim.play("run")
@@ -18,20 +20,27 @@ func _ready():
 func _physics_process(delta):
 	
 	if cast_player_left.is_colliding():
-		var bullet_instance = bullet.instantiate()
-		get_parent().add_child(bullet_instance)
-		bullet_instance.position = global_position
-		bullet_instance.direccion = -1
-		
 		sprite.flip_h = false
 		velocity.x = -speed
-	elif cast_player_right.is_colliding():
-		var bullet_instance = bullet.instantiate()
-		get_parent().add_child(bullet_instance)
+		if shot:
+			var bullet_instance = bullet.instantiate()
+			get_parent().add_child(bullet_instance)
+			bullet_instance.position = global_position
+			bullet_instance.direccion = -1
+			bullet_instance.anim.play("salir")
+			shot = false
+			time = 5	
 
-		bullet_instance.direccion = 1
+	elif cast_player_right.is_colliding():
 		sprite.flip_h = true
 		velocity.x = speed
+		if shot:
+			var bullet_instance = bullet.instantiate()
+			get_parent().add_child(bullet_instance)
+			bullet_instance.position = global_position
+			bullet_instance.direccion = 1
+			shot = false
+			time = 5
 
 	if not cast_player_left.is_colliding() and !sprite.flip_h:
 		velocity.x = -SPEED
@@ -48,4 +57,9 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+func _process(delta):
 
+	if !shot and time > 0:
+		time -= delta
+		if time < 1:
+			shot= true
