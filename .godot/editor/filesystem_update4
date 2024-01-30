@@ -3,3 +3,7 @@ res://lead/ecenas/menu.tscn
 res://lead/ecenas/yosef.tscn
 res://lead/ecenas/bot_1.tscn
 res://lead/script/bot_1.gd
+res://lead/script/yosef.gd
+res://bullet_1.gd
+res://lead/ecenas/bullet_1.tscn
+res://lead/script/bullet_1.gd

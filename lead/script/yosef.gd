@@ -7,9 +7,11 @@ const jump_velocity = -350.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var animtrtee: AnimationTree
 @export var camara: Camera2D
+var vida = 100
 
-
-
+func _process(_delta):
+	$CanvasLayer/Control2/vida.value = vida
+	
 func _physics_process(delta): 
 
 	if not is_on_floor():
@@ -41,6 +43,9 @@ func _physics_process(delta):
 		animtrtee.set("parameters/conditions/is_idle", true) 
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
+
+func daño_player(daño):
+	vida -= daño
 													   #<>
 
 
