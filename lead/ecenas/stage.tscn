@@ -198,6 +198,7 @@ scale = Vector2(1.57, 1.57)
 texture = ExtResource("14_sykxd")
 
 [node name="on_screen" type="Node2D" parent="."]
+visible = false
 
 [node name="parte_1" type="VisibleOnScreenNotifier2D" parent="on_screen"]
 position = Vector2(-700.75, 527.75)

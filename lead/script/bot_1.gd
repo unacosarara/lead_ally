@@ -11,7 +11,7 @@ var direccion: bool
 @export var sprite: Sprite2D
 var bullet: PackedScene = preload("res://lead/ecenas/bullet_1.tscn")
 var shot: bool
-var time: float = 10
+var time: float = 1
 
 func _ready():
 	anim.play("run")
@@ -27,9 +27,11 @@ func _physics_process(delta):
 			get_parent().add_child(bullet_instance)
 			bullet_instance.position = global_position
 			bullet_instance.direccion = -1
+			var bullet_sprite: Sprite2D = bullet_instance.get_node("Sprite2D")
+			bullet_sprite.flip_h = true
 			bullet_instance.anim.play("salir")
 			shot = false
-			time = 5	
+			time = 2
 
 	elif cast_player_right.is_colliding():
 		sprite.flip_h = true
@@ -39,8 +41,10 @@ func _physics_process(delta):
 			get_parent().add_child(bullet_instance)
 			bullet_instance.position = global_position
 			bullet_instance.direccion = 1
+			var bullet_sprite: Sprite2D = bullet_instance.get_node("Sprite2D")
+			bullet_sprite.flip_h = false
 			shot = false
-			time = 5
+			time = 2
 
 	if not cast_player_left.is_colliding() and !sprite.flip_h:
 		velocity.x = -SPEED

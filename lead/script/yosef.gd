@@ -6,10 +6,11 @@ const SPEED = 200
 const jump_velocity = -350.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var animtrtee: AnimationTree
+@export var hit: AnimationPlayer
 @export var camara: Camera2D
 var vida = 100
 
-func _process(_delta):
+func _process(_delta):        
 	$CanvasLayer/Control2/vida.value = vida
 	
 func _physics_process(delta): 
@@ -24,6 +25,8 @@ func _physics_process(delta):
 	var direction = Input.get_axis("ui_left", "ui_right")
 	direcion = direction
 	if Input.is_action_pressed("ui_left"):
+
+
 
 		$sprite_sheet_yosef.position.x = -10.28
 		$sprite_sheet_yosef.flip_h = true
@@ -44,8 +47,10 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
 
-func daño_player(daño):
+func daño_player(daño,dir):
 	vida -= daño
+	velocity.x += dir * 600
+	hit.play("hit")
 													   #<>
 
 
