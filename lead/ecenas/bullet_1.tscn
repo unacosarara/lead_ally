@@ -158,7 +158,6 @@ vframes = 2
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-callback_mode_method = 1
 libraries = {
 "": SubResource("AnimationLibrary_kwj0f")
 }

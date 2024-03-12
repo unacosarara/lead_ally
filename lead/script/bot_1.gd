@@ -12,6 +12,7 @@ var direccion: bool
 var bullet: PackedScene = preload("res://lead/ecenas/bullet_1.tscn")
 var shot: bool
 var time: float = 1
+var vida = 100
 
 func _ready():
 	anim.play("run")
@@ -67,3 +68,6 @@ func _process(delta):
 		time -= delta
 		if time < 1:
 			shot= true
+
+func daño_player():
+	vida -= 10

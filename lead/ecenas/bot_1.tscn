@@ -45,7 +45,7 @@ _data = {
 "run": SubResource("Animation_y3oob")
 }
 
-[node name="bot_1" type="CharacterBody2D" node_paths=PackedStringArray("anim", "cast_player_left", "cast_player_right", "cast_left", "cast_right", "sprite")]
+[node name="bot_1" type="CharacterBody2D" node_paths=PackedStringArray("anim", "cast_player_left", "cast_player_right", "cast_left", "cast_right", "sprite") groups=["bot_1"]]
 scale = Vector2(1.2, 1.2)
 collision_layer = 16
 collision_mask = 9
