@@ -217,7 +217,7 @@ z_index = 6
 position = Vector2(-1472, 567)
 
 [node name="bot_1" parent="." instance=ExtResource("16_x1cp1")]
-position = Vector2(-1140, 656)
+position = Vector2(147, 569)
 
 [connection signal="screen_entered" from="on_screen/parte_1" to="." method="_on_parte_1_screen_entered"]
 [connection signal="screen_exited" from="on_screen/parte_1" to="." method="_on_parte_1_screen_exited"]

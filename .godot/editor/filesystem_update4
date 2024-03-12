@@ -1,6 +1,7 @@
-res://lead/ecenas/yosef.tscn
-res://lead/shader/yosef.gdshader
 res://lead/ecenas/stage.tscn
+res://lead/shader/yosef.gdshader
+res://lead/script/yosef.gd
 res://lead/ecenas/menu.tscn
+res://lead/ecenas/yosef.tscn
 res://lead/ecenas/bot_1.tscn
 res://lead/ecenas/bullet_1.tscn
