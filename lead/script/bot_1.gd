@@ -3,6 +3,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 const SPEED = 70
 const speed = 20
 var direccion: bool
+@export var vida = 100
 @export var anim: AnimationPlayer 
 @export var cast_player_left: RayCast2D
 @export var cast_player_right: RayCast2D
@@ -12,7 +13,7 @@ var direccion: bool
 var bullet: PackedScene = preload("res://lead/ecenas/bullet_1.tscn")
 var shot: bool
 var time: float = 1
-var vida = 100
+var blend_particle_bot : float = -1
 
 func _ready():
 	anim.play("run")
@@ -63,11 +64,30 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _process(delta):
-
+	if vida <= 0:
+		morir()
 	if !shot and time > 0:
 		time -= delta
 		if time < 1:
 			shot= true
 
-func daño_player():
+
+func daño_player(dir):
+	$AnimationPlayer2.play("resivir_golpe")
+	position.x += dir * 20
 	vida -= 10
+	
+func morir():
+#		for i in  randf_range(2,6):
+#			var Ore1 = ore1.instantiate()
+#			Ore1.position = $"posicionore".global_position
+#			get_tree().current_scene.add_child(Ore1)
+#		for i in  randf_range(1,4):
+#			var Ore2 = ore2.instantiate()
+#			Ore2.position = $"posicionore".global_position
+#			get_tree().current_scene.add_child(Ore2)
+#		for i in  randf_range(0,2):
+#			var Ore3 = ore3.instantiate()
+#			Ore3.position = $"posicionore".global_position
+#			get_tree().current_scene.add_child(Ore3)
+	pass

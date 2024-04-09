@@ -1,24 +1,54 @@
-[gd_scene load_steps=146 format=3 uid="uid://djy17kthot4e5"]
+[gd_scene load_steps=151 format=3 uid="uid://djy17kthot4e5"]
 
 [ext_resource type="Texture2D" uid="uid://gsxkxytlvj2g" path="res://lead/sprites/yosef/spr_sheet_Yosef.png" id="1_2xrn2"]
 [ext_resource type="Script" path="res://lead/script/yosef.gd" id="1_mucji"]
+[ext_resource type="Texture2D" uid="uid://qcg13hjwvn5w" path="res://lead/sprites/ui/btn_player/left.png" id="2_1tru4"]
 [ext_resource type="Texture2D" uid="uid://b5crkp30w5i0h" path="res://lead/sprites/yosef/Spr_Run_Yosef.png" id="2_7ji18"]
 [ext_resource type="Texture2D" uid="uid://ts1dh8ae1tuw" path="res://lead/sprites/yosef/ataque.png" id="2_mnh11"]
-[ext_resource type="Texture2D" uid="uid://qcg13hjwvn5w" path="res://lead/sprites/ui/left.png" id="4_ks6e4"]
+[ext_resource type="Texture2D" uid="uid://ckbe0lbkw3jqi" path="res://lead/sprites/ui/btn_player/left_press.png" id="3_ba3a2"]
+[ext_resource type="Texture2D" uid="uid://duiossqe38q5v" path="res://lead/sprites/ui/btn_player/right.png" id="4_hdhei"]
 [ext_resource type="Texture2D" uid="uid://dm20wuabksxhi" path="res://lead/sprites/yosef/Jum.png" id="4_xvqwk"]
-[ext_resource type="Texture2D" uid="uid://ckbe0lbkw3jqi" path="res://lead/sprites/ui/left_press.png" id="5_2n1ee"]
-[ext_resource type="Texture2D" uid="uid://duiossqe38q5v" path="res://lead/sprites/ui/right.png" id="6_v7lxw"]
-[ext_resource type="Texture2D" uid="uid://dqgefsjub4kx5" path="res://lead/sprites/ui/right_press.png" id="7_gjajm"]
-[ext_resource type="Texture2D" uid="uid://bh0fqi0cuyo3m" path="res://lead/sprites/ui/atack_btn.png" id="8_7ovln"]
-[ext_resource type="Texture2D" uid="uid://78gbdrg1ri4c" path="res://lead/sprites/ui/jump.png" id="8_xlvp4"]
-[ext_resource type="Texture2D" uid="uid://piifcm3c8ekb" path="res://lead/sprites/ui/atack_btn_press.png" id="9_p5dmj"]
-[ext_resource type="Texture2D" uid="uid://0jt1liyj7t1b" path="res://lead/sprites/ui/jump_press.png" id="9_xo2eg"]
-[ext_resource type="Texture2D" uid="uid://fhub60q8pq45" path="res://lead/sprites/ui/mochila.png" id="10_pmq5l"]
-[ext_resource type="Texture2D" uid="uid://can37ria8vex0" path="res://lead/sprites/ores.png" id="10_tvcp3"]
-[ext_resource type="Texture2D" uid="uid://bvlilem7dk2n0" path="res://lead/sprites/ui/mochila_press.png" id="11_ruv3i"]
+[ext_resource type="Texture2D" uid="uid://dqgefsjub4kx5" path="res://lead/sprites/ui/btn_player/right_press.png" id="5_djlbc"]
+[ext_resource type="Texture2D" uid="uid://bh0fqi0cuyo3m" path="res://lead/sprites/ui/btn_player/atack_btn.png" id="6_8ob16"]
+[ext_resource type="Texture2D" uid="uid://piifcm3c8ekb" path="res://lead/sprites/ui/btn_player/atack_btn_press.png" id="7_dkmcm"]
+[ext_resource type="Texture2D" uid="uid://78gbdrg1ri4c" path="res://lead/sprites/ui/btn_player/jump.png" id="8_mu0uu"]
+[ext_resource type="Texture2D" uid="uid://0jt1liyj7t1b" path="res://lead/sprites/ui/btn_player/jump_press.png" id="9_koroi"]
+[ext_resource type="Texture2D" uid="uid://fhub60q8pq45" path="res://lead/sprites/ui/btn_player/mochila.png" id="10_7k30g"]
+[ext_resource type="Texture2D" uid="uid://bvlilem7dk2n0" path="res://lead/sprites/ui/btn_player/mochila_press.png" id="11_6myy8"]
 [ext_resource type="Shader" path="res://lead/shader/yosef.gdshader" id="11_yfrpg"]
+[ext_resource type="Texture2D" uid="uid://can37ria8vex0" path="res://lead/sprites/tienda/ores.png" id="12_s26wo"]
 [ext_resource type="Texture2D" uid="uid://bkokqu03vbjto" path="res://lead/sprites/fondo/1/fondo.png" id="12_wqo27"]
-[ext_resource type="Texture2D" uid="uid://ccajt4ebn3p8q" path="res://lead/sprites/ui/hit.png" id="15_yh4pb"]
+[ext_resource type="Texture2D" uid="uid://ccajt4ebn3p8q" path="res://lead/sprites/ui/btn_player/hit.png" id="13_5sne0"]
+[ext_resource type="Texture2D" uid="uid://beduj6ism0y6g" path="res://lead/sprites/yosef/fx_run.png" id="17_vill6"]
+[ext_resource type="PackedScene" uid="uid://dxw4mqsow4ivl" path="res://lead/ecenas/particle_1.tscn" id="20_wr64d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us13l"]
+atlas = ExtResource("12_s26wo")
+region = Rect2(4, 48, 24, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfccd"]
+atlas = ExtResource("12_s26wo")
+region = Rect2(3.67023, 47.9993, 71.0258, 27.3971)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfvm5"]
+atlas = ExtResource("12_s26wo")
+region = Rect2(28, 76, 46, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_se256"]
+atlas = ExtResource("12_s26wo")
+region = Rect2(4, 78, 23, 7)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_opy7u"]
+shader = ExtResource("11_yfrpg")
+shader_parameter/blur_strength = 0.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dj0m6"]
+radius = 12.5
+height = 35.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_clqgy"]
+radius = 9.0
+height = 40.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4cn6j"]
 atlas = ExtResource("2_mnh11")
@@ -566,6 +596,69 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_0yet2"]
+resource_name = "hit"
+length = 0.166672
+step = 0.0555556
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control3:material:shader_parameter/blur_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0555556, 0.111111),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.4, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_gujld"]
+length = 0.166672
+step = 0.0555556
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control3:material:shader_parameter/blur_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0555556, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.2, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/hit:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/hit:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.111111),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.0980392), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_opuy0"]
+_data = {
+"golpe": SubResource("Animation_0yet2"),
+"hit": SubResource("Animation_gujld")
+}
+
 [sub_resource type="Animation" id="Animation_cqevm"]
 length = 0.001
 tracks/0/type = "value"
@@ -1036,133 +1129,28 @@ states/run/node = SubResource("AnimationNodeBlendSpace1D_ko6aa")
 states/run/position = Vector2(441, 176)
 transitions = ["idle", "run", SubResource("AnimationNodeStateMachineTransition_sik82"), "run", "atack", SubResource("AnimationNodeStateMachineTransition_yuu8b"), "atack", "idle", SubResource("AnimationNodeStateMachineTransition_kgk8d"), "idle", "atack", SubResource("AnimationNodeStateMachineTransition_t1yxp"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_nvy8d"), "atack", "run", SubResource("AnimationNodeStateMachineTransition_03t3g"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_0vu71"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_gmq2o"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_yhot3"), "atack", "jump", SubResource("AnimationNodeStateMachineTransition_voauq"), "abajo", "jump", SubResource("AnimationNodeStateMachineTransition_5rblx"), "abajo", "run", SubResource("AnimationNodeStateMachineTransition_dreo7"), "abajo", "idle", SubResource("AnimationNodeStateMachineTransition_gpxlr"), "abajo", "atack", SubResource("AnimationNodeStateMachineTransition_nec1q"), "jump", "atack", SubResource("AnimationNodeStateMachineTransition_2v73l"), "jump", "abajo", SubResource("AnimationNodeStateMachineTransition_h4160"), "atack", "abajo", SubResource("AnimationNodeStateMachineTransition_6ssg5")]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_clqgy"]
-radius = 9.0
-height = 40.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_ko7vi"]
+atlas = ExtResource("17_vill6")
+region = Rect2(228, 53, 14, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_us13l"]
-atlas = ExtResource("10_tvcp3")
-region = Rect2(4, 48, 24, 26)
+[sub_resource type="Curve" id="Curve_8afel"]
+_data = [Vector2(0, 0.642105), 0.0, -0.505263, 0, 0, Vector2(0.520833, 0.336842), -0.772756, -0.772756, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bfccd"]
-atlas = ExtResource("10_tvcp3")
-region = Rect2(3.67023, 47.9993, 71.0258, 27.3971)
+[sub_resource type="Gradient" id="Gradient_spq4p"]
+offsets = PackedFloat32Array(0, 0.992908, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.666667, 0.690196, 0.447059, 0, 1, 1, 1, 0)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rfvm5"]
-atlas = ExtResource("10_tvcp3")
-region = Rect2(28, 76, 46, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_se256"]
-atlas = ExtResource("10_tvcp3")
-region = Rect2(4, 78, 23, 7)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_opy7u"]
-shader = ExtResource("11_yfrpg")
-shader_parameter/blur_strength = 0.0
-
-[sub_resource type="Animation" id="Animation_0yet2"]
-resource_name = "hit"
-length = 0.166672
-step = 0.0555556
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Control3:material:shader_parameter/blur_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0555556, 0.111111),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.4, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_gujld"]
-length = 0.166672
-step = 0.0555556
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Control3:material:shader_parameter/blur_strength")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0555556, 0.166667),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, 0.2, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/hit:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/hit:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.111111),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0.0980392), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_opuy0"]
-_data = {
-"golpe": SubResource("Animation_0yet2"),
-"hit": SubResource("Animation_gujld")
-}
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dj0m6"]
-radius = 12.5
-height = 35.0
-
-[node name="yosef" type="CharacterBody2D" node_paths=PackedStringArray("camara", "hit") groups=["player"]]
+[node name="yosef" type="CharacterBody2D" node_paths=PackedStringArray("particle_1", "particle_2", "camara", "hit") groups=["player"]]
 scale = Vector2(1.2, 1.2)
 collision_layer = 8
 collision_mask = 49
 script = ExtResource("1_mucji")
+SPEED = 180
+particle_1 = NodePath("particles/particle_1")
+particle_2 = NodePath("particles/particle_2")
 camara = NodePath("Camera2D")
 hit = NodePath("vfx")
-
-[node name="sprite_sheet_yosef" type="AnimatedSprite2D" parent="."]
-position = Vector2(-10.28, -0.02)
-sprite_frames = SubResource("SpriteFrames_dwx0d")
-animation = &"idle"
-offset = Vector2(0, -1.19)
-flip_h = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_0gxw7")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_q3hqs")
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/conditions/is_abajo = false
-parameters/conditions/is_atack = false
-parameters/conditions/is_idle = false
-parameters/conditions/is_jump = false
-parameters/conditions/is_run = false
-parameters/atack/blend_position = -1.0
-parameters/idle/blend_position = -1.0
-parameters/run/blend_position = -1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, 1.5)
-shape = SubResource("CapsuleShape2D_clqgy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1177,36 +1165,36 @@ grow_vertical = 2
 [node name="left" type="TouchScreenButton" parent="CanvasLayer/Control"]
 position = Vector2(40, 257)
 scale = Vector2(2, 2)
-texture_normal = ExtResource("4_ks6e4")
-texture_pressed = ExtResource("5_2n1ee")
+texture_normal = ExtResource("2_1tru4")
+texture_pressed = ExtResource("3_ba3a2")
 action = "ui_left"
 
 [node name="rigt" type="TouchScreenButton" parent="CanvasLayer/Control"]
 position = Vector2(113, 257)
 scale = Vector2(2, 2)
-texture_normal = ExtResource("6_v7lxw")
-texture_pressed = ExtResource("7_gjajm")
+texture_normal = ExtResource("4_hdhei")
+texture_pressed = ExtResource("5_djlbc")
 action = "ui_right"
 
 [node name="atack" type="TouchScreenButton" parent="CanvasLayer/Control"]
 position = Vector2(471, 210)
 scale = Vector2(2, 2)
-texture_normal = ExtResource("8_7ovln")
-texture_pressed = ExtResource("9_p5dmj")
+texture_normal = ExtResource("6_8ob16")
+texture_pressed = ExtResource("7_dkmcm")
 action = "atack"
 
 [node name="jump" type="TouchScreenButton" parent="CanvasLayer/Control"]
 position = Vector2(509, 249)
 scale = Vector2(2, 2)
-texture_normal = ExtResource("8_xlvp4")
-texture_pressed = ExtResource("9_xo2eg")
-action = "ui_accept"
+texture_normal = ExtResource("8_mu0uu")
+texture_pressed = ExtResource("9_koroi")
+action = "salto"
 
 [node name="mochila" type="TouchScreenButton" parent="CanvasLayer/Control"]
 position = Vector2(537, 10)
 scale = Vector2(1.5, 1.5)
-texture_normal = ExtResource("10_pmq5l")
-texture_pressed = ExtResource("11_ruv3i")
+texture_normal = ExtResource("10_7k30g")
+texture_pressed = ExtResource("11_6myy8")
 
 [node name="Control2" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -1260,7 +1248,7 @@ offset_right = 585.0
 offset_bottom = 325.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("15_yh4pb")
+texture = ExtResource("13_5sne0")
 
 [node name="Control3" type="TextureRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_opy7u")
@@ -1282,11 +1270,6 @@ drag_bottom_margin = 0.34
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="vfx" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_opuy0")
-}
-
 [node name="daño_enemi" type="Area2D" parent="."]
 position = Vector2(10, 0)
 collision_layer = 17
@@ -1297,5 +1280,61 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="daño_enemi"]
 shape = SubResource("CapsuleShape2D_dj0m6")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 1.5)
+shape = SubResource("CapsuleShape2D_clqgy")
+
+[node name="sprite_sheet_yosef" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10.28, -0.02)
+sprite_frames = SubResource("SpriteFrames_dwx0d")
+animation = &"idle"
+offset = Vector2(0, -1.19)
+flip_h = true
+
+[node name="vfx" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_opuy0")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0gxw7")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_q3hqs")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/conditions/is_abajo = false
+parameters/conditions/is_atack = false
+parameters/conditions/is_idle = false
+parameters/conditions/is_jump = false
+parameters/conditions/is_run = false
+parameters/atack/blend_position = -1.0
+parameters/idle/blend_position = -1.0
+parameters/run/blend_position = -1.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-5, 22.5)
+emitting = false
+amount = 6
+lifetime = 0.4
+texture = SubResource("AtlasTexture_ko7vi")
+emission_shape = 3
+emission_rect_extents = Vector2(5, 0)
+gravity = Vector2(0, -90)
+angle_min = -164.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_8afel")
+color = Color(100, 100, 100, 0.73)
+color_initial_ramp = SubResource("Gradient_spq4p")
+
+[node name="particles" type="Node" parent="."]
+
+[node name="particle_1" parent="particles" instance=ExtResource("20_wr64d")]
+
+[node name="particle_2" parent="particles" instance=ExtResource("20_wr64d")]
+
 [connection signal="pressed" from="CanvasLayer/Control/atack" to="." method="_on_atack_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/jump" to="." method="_on_jump_pressed"]
 [connection signal="body_entered" from="daño_enemi" to="." method="_on_daño_enemi_body_entered"]

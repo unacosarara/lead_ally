@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://ca7a2cgosntv"]
+
+[ext_resource type="Script" path="res://lead/script/enemi_1.gd" id="1_gi2rf"]
+[ext_resource type="Texture2D" uid="uid://cibpktsk4yygm" path="res://lead/sprites/npc/enemigo/Sprite-enemigo.png" id="1_l2e8x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nvep2"]
+radius = 15.8114
+
+[sub_resource type="Animation" id="Animation_jq6hk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("..")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_nui1h"]
+resource_name = "run"
+length = 0.416675
+loop_mode = 1
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer:root_node")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("..")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.115786, 0.22675, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1qc1n"]
+_data = {
+"RESET": SubResource("Animation_jq6hk"),
+"run": SubResource("Animation_nui1h")
+}
+
+[node name="enemi_1" type="CharacterBody2D"]
+script = ExtResource("1_gi2rf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_nvep2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 9)
+texture = ExtResource("1_l2e8x")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "run"
+libraries = {
+"": SubResource("AnimationLibrary_1qc1n")
+}

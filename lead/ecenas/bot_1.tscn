@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxfya4528t3lm"]
+[gd_scene load_steps=10 format=3 uid="uid://dxfya4528t3lm"]
 
-[ext_resource type="Texture2D" uid="uid://cj1o4f2xpqx68" path="res://lead/sprites/npc/enemigo/bot_1.png" id="1_5iasy"]
 [ext_resource type="Script" path="res://lead/script/bot_1.gd" id="1_m0rf3"]
+[ext_resource type="Texture2D" uid="uid://cj1o4f2xpqx68" path="res://lead/sprites/npc/enemigo/bot_1/bot_1.png" id="2_wtwfp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oq8db"]
 radius = 15.0
@@ -45,6 +45,92 @@ _data = {
 "run": SubResource("Animation_y3oob")
 }
 
+[sub_resource type="Animation" id="Animation_2r5w3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_wtwfp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 0.95)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8wkk3"]
+resource_name = "resivir_golpe"
+length = 0.250008
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_wtwfp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 0.95), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1.5, 1.5, 1.5, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d70dn"]
+_data = {
+"RESET": SubResource("Animation_2r5w3"),
+"resivir_golpe": SubResource("Animation_8wkk3")
+}
+
 [node name="bot_1" type="CharacterBody2D" node_paths=PackedStringArray("anim", "cast_player_left", "cast_player_right", "cast_left", "cast_right", "sprite") groups=["bot_1"]]
 scale = Vector2(1.2, 1.2)
 collision_layer = 16
@@ -62,7 +148,8 @@ position = Vector2(2, 1)
 shape = SubResource("CapsuleShape2D_oq8db")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_5iasy")
+scale = Vector2(1, 0.95)
+texture = ExtResource("2_wtwfp")
 hframes = 4
 frame = 1
 
@@ -86,3 +173,10 @@ rotation = 1.5708
 
 [node name="cast_right" type="RayCast2D" parent="."]
 rotation = -1.5708
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_d70dn")
+}
+
+[node name="Marker_bot" type="Marker2D" parent="."]

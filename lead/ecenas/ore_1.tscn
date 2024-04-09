@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuva1qifa6eat"]
+
+[ext_resource type="Script" path="res://lead/script/ores.gd" id="1_epv7u"]
+[ext_resource type="Texture2D" uid="uid://can37ria8vex0" path="res://lead/sprites/tienda/ores.png" id="2_aw74o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2ffq"]
+radius = 8.5
+height = 17.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4qtt"]
+atlas = ExtResource("2_aw74o")
+region = Rect2(3, 4, 23, 19)
+
+[node name="ore1" type="RigidBody2D" groups=["ore1"]]
+script = ExtResource("1_epv7u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0.5)
+shape = SubResource("CapsuleShape2D_x2ffq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_k4qtt")

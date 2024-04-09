@@ -1,5 +1,9 @@
-res://lead/ecenas/bot_1.tscn::bd575b985d8070511cffb89c83d4a2df::1708361271::res://.godot/exported/133200997/export-df30beb05c51e7180bfc7f497af8a2ae-bot_1.scn
-res://lead/ecenas/bullet_1.tscn::362150a03ebdb30232871cdff4eebd93::1708361271::res://.godot/exported/133200997/export-ea08bbf2ccb380663be6bd98c45e0c7e-bullet_1.scn
-res://lead/ecenas/menu.tscn::7edb1cf2eb95a2e3675b32a90b8f5da4::1708361270::res://.godot/exported/133200997/export-f5b09d247794e767798a7f5d423c2a0b-menu.scn
-res://lead/ecenas/stage.tscn::8eca285d489916abcd625be6e01d0291::1708361270::res://.godot/exported/133200997/export-4309d786607b676972e612852e186200-stage.scn
-res://lead/ecenas/yosef.tscn::2371af5f5fbd0972f2fdf7b2f8c6e781::1708361271::res://.godot/exported/133200997/export-c9413203abcde574aa44fc4a70089475-yosef.scn
+res://lead/ecenas/bot_1.tscn::0500d2515302850240697ae93adf9bff::1711838626::res://.godot/exported/133200997/export-df30beb05c51e7180bfc7f497af8a2ae-bot_1.scn
+res://lead/ecenas/bullet_1.tscn::6940e3e683bcce8728fa7a43c9326cf7::1711838626::res://.godot/exported/133200997/export-ea08bbf2ccb380663be6bd98c45e0c7e-bullet_1.scn
+res://lead/ecenas/menu.tscn::7edb1cf2eb95a2e3675b32a90b8f5da4::1711838626::res://.godot/exported/133200997/export-f5b09d247794e767798a7f5d423c2a0b-menu.scn
+res://lead/ecenas/stage.tscn::56dabfb366faed6f82634fe63fc2a30b::1711838626::res://.godot/exported/133200997/export-4309d786607b676972e612852e186200-stage.scn
+res://lead/ecenas/yosef.tscn::d049c56911a7ce73a1658e2e057f28ba::1711838626::res://.godot/exported/133200997/export-c9413203abcde574aa44fc4a70089475-yosef.scn
+res://lead/ecenas/enemi_1.tscn::201968c334c3c1b964a368aee2969949::1711838626::res://.godot/exported/133200997/export-76061771f159f4c4a970bf11de50c95f-enemi_1.scn
+res://lead/ecenas/particle_1.tscn::02dbeba87c3dd78a20c46d3d30d4f4e2::1710372998::res://.godot/exported/133200997/export-35fe2f6b5775a876c3828fe997c5c480-particle_1.scn
+res://lead/ecenas/post_dead.tscn::9699a2d5712a9e515b341e1e4bd9ff42::1710808299::res://.godot/exported/133200997/export-14b27606831c960ec593dc09033fe9a4-post_dead.scn
+res://lead/ecenas/tienda.tscn::0a5fce28ce932de05a743a5707ac075e::1711838626::res://.godot/exported/133200997/export-cae8d5d800ea9b191e2d8d55c39c3c5f-tienda.scn

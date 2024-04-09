@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsxjjl44t36oo"]
+
+[ext_resource type="Texture2D" uid="uid://o5ral440v8vm" path="res://lead/sprites/tienda/tienda.png" id="1_67dyw"]
+
+[node name="tienda" type="Node2D"]
+
+[node name="Tienda" type="Sprite2D" parent="."]
+texture = ExtResource("1_67dyw")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]

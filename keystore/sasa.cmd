@@ -1,0 +1,1 @@
+keytool -v -genkey -keystore leadore.keystore -alias leadore -keyalg RSA -validity 10000
